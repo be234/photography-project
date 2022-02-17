@@ -2,19 +2,287 @@
 @import "mixins";
 
 body {
-    background-color: $danger;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
-.blog-preview {
-    padding: 10px 16px;
-    margin: 20px 0;
-    border-bottom: 1px solid #fafafa;
+// Home Link pictures
+.main-pics-container {
+  margin: auto;
+  width: 80.3%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  row-gap: 40px;
+  
+  .flex-items {
+    width: 80vh;
   }
-  .blog-preview:hover {
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
+  img {
+    width: 81vh;
   }
-  .blog-preview h2 {
-    font-size: 20px;
-    color: #f1356d;
-    margin-bottom: 8px;
+
+  a {
+    text-decoration: none;
   }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.4em;
+    padding: 10px 0px;
+    color: $dark-gray;
+  }
+
+}
+
+
+// Footer
+.footer {
+  width: 77%;
+  height: 130px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  position: relative;
+  
+  div {
+    font-size: 0.9em;
+    color: #ddd;
+  }
+
+  a {
+    color: #ddd;
+  }
+}
+
+// Navbar 
+
+nav {
+  height: 80px;
+  width: 90%;
+  margin-bottom: 40px;
+
+  label.logo {
+    color: $dark-gray;
+    font-size: 25px;
+    line-height: 120px;
+    padding: 0 140px;
+    font-weight: bold;
+    
+    img {
+      width: 150px;
+      opacity: .6;
+    }
+  }
+  ul {
+    float: right;
+    margin-right: -20px;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+
+  a {
+    color: $dark-gray;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    &:hover {
+      transition: .3s;
+      color: darkorange;
+      text-decoration: underline;
+    }
+  }
+
+  // a.active,a:hover {
+  //   background-color: #eee;
+  //   transition: .5s;
+  // }
+  
+
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  @include mQ(952px) {
+    label.log {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+  @include mQ(858px) {
+    .checkbtn {
+      display: block;
+    }
+    
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 30vh;
+      background-color: #fff;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+    }
+
+    li {
+      display: block;
+      margin: 25px 0;
+      line-height: 30px;
+    }
+    
+    a {
+      font-size: 20px;
+    }
+    
+    a:hover, a.active {
+      background: none;
+      color: #000;
+    }
+
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+}
+
+// gallery
+.container {
+  position: relative;
+  column-count: 3;
+  width: 85%;
+  margin: auto;
+
+
+  .image {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    
+    h1{
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      font-size: 20px;
+      width: 100%;
+      height: 26px;
+      padding: 0;
+      margin: 0;
+      margin-top: -13px; /* 1/2 height */
+      text-align: center;
+      color: white;      
+      opacity: 0;
+      transition: 0.4s ease-out;
+      font-size: 25px;
+      font-weight: 400;
+     }
+  }
+
+  img {
+    width: 57vh;
+    transition: 0.4s ease-out;
+  }
+
+  .image:hover img {
+    filter: brightness(85%);
+  }
+
+  // h1 {
+  //   position: absolute;
+  //   padding: 5px;
+  //   margin: 5px;
+  //   font-size: 25px;
+  //   background-color: #5c5c5c;
+  //   color: #fff;
+  //   border-radius: 5px;
+  //   opacity: 0;
+  //   z-index: 1;
+  //   transition: 0.25 ease-in-out;
+  // }
+
+  .image:hover {
+    h1 {
+      opacity: 1;
+    }
+  }
+
+  @include mQ(1024px) {
+
+  }
+
+  @include mQ(768px) {
+    column-count: 3;
+  }
+
+  @include mQ(425px) {
+    column-count: 2;
+
+    h1 {
+      font-size: 12px;
+    }
+  }
+
+  @include mQ(375px) {
+    column-count: 1;
+
+    h1 {
+      font-size: 15px;
+    }
+  }
+}
+
+// About page 
+.about {
+  width: 160vh;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+
+  .div1 {
+    img {
+      width: 70vh;
+    }
+  }
+
+  .div2 {
+    width: 70vh;
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  p {
+    color: #777;
+  }
+
+  b {
+    color: #666;
+  }
+}
