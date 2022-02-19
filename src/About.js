@@ -2,10 +2,10 @@ const About = () => {
     return ( 
         <div className="about">
             <div className="div1"><img src="https://i.pinimg.com/564x/77/f4/0b/77f40b260260300e6e12f19fa65ddf9e.jpg" alt="about page image" /></div>
-         
+          
             <div className="div2">
             <h3>About</h3>
-            <p>I'm a website developer living in egypt - who works individually, across a range of creative disciplines including programming, styling, illustration and design.</p>
+            <p>I'm a Front-End Developer living in egypt - who works individually, across a range of creative disciplines including programming, styling, illustration and design.</p>
 <br></br>
             <p><b>Mail.</b>  belalelgebaly4@gmail.com / email@example.com
             </p>
