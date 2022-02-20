@@ -7,7 +7,7 @@ const Navbar = () => {
             <input type="checkbox" id='check' />
             <label htmlFor="check" className='checkbtn'>
                 <li className='fas fa-bars'></li>
-            </label>
+            </label> 
             <Link to="/"><label className='logo'><img src={logo} /></label></Link>
             <ul>
                 <li><Link className="a" to="/">Portfolio</Link></li>

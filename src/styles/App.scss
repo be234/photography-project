@@ -226,7 +226,7 @@ nav {
     text-align: center;
 
     a {
-      @include maxMQ(768px) {
+      @include maxMQ(450px) {
         pointer-events: none;
       }
     }
@@ -311,6 +311,7 @@ nav {
     }
     @include maxMQ(600px) {
       width: 90%;
+      min-width: 330px;
     }
   }
 
