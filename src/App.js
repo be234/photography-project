@@ -1,7 +1,7 @@
 import Home from './Home';
 import Navbar from './Navbar';
 import './styles/App.scss';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import SectionDetails1 from './sections/SectionDetails1';
 import SectionDetails2 from './sections/SectionDetails2';
 import SectionDetails3 from './sections/SectionDetails3';
@@ -15,43 +15,21 @@ import About from './About';
 
 function App() {
   return (
-  <Router>
     <div className="App">
       <Navbar />
-      <div className="content">
-        <Switch>
-          <Route exact path="/">
-             <Home /> 
-          </Route>
-          <Route path="/section1">
-             <SectionDetails1 />
-          </Route>
-         <Route path="/section2">
-             <SectionDetails2 />
-          </Route>
-           <Route path="/section3">
-             <SectionDetails3 />
-          </Route>
-          <Route path="/section4">
-             <SectionDetails4 />
-          </Route>
-          <Route path="/section5">
-             <SectionDetails5 />
-          </Route>
-          <Route path="/section6">
-             <SectionDetails6 />
-          </Route> 
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
+        <Route exact path="/" component={Home} />
+
+        <Route path="/section1" component={SectionDetails1} />
+        <Route path="/section2" component={SectionDetails2} />
+        <Route path="/section3" component={SectionDetails3} />
+        <Route path="/section4" component={SectionDetails4} />
+        <Route path="/section5" component={SectionDetails5} />
+        <Route path="/section6" component={SectionDetails6} />
+        <Route path="/about" component={About} />
+
+        {/* <Route path="*" component={NotFound} /> */}
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  </Router>
   );
 }
 
