@@ -1,8 +1,7 @@
 import Home from './Home';
 import Navbar from './Navbar';
 import './styles/App.scss';
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SectionDetails1 from './sections/SectionDetails1';
 import SectionDetails2 from './sections/SectionDetails2';
 import SectionDetails3 from './sections/SectionDetails3';
@@ -21,28 +20,28 @@ function App() {
       <Navbar />
       <div className="content">
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/photography-project">
              <Home /> 
           </Route>
-          <Route path="/section1">
+          <Route path="/photography-project/section1">
              <SectionDetails1 />
           </Route>
-         <Route path="/section2">
+         <Route path="/photography-project/section2">
              <SectionDetails2 />
           </Route>
-           <Route path="/section3">
+           <Route path="/photography-project/section3">
              <SectionDetails3 />
           </Route>
-          <Route path="/section4">
+          <Route path="/photography-project/section4">
              <SectionDetails4 />
           </Route>
-          <Route path="/section5">
+          <Route path="/photography-project/section5">
              <SectionDetails5 />
           </Route>
-          <Route path="/section6">
+          <Route path="/photography-project/section6">
              <SectionDetails6 />
           </Route> 
-          <Route path="/about">
+          <Route path="/photography-project/about">
             <About />
           </Route>
           <Route path="*">
