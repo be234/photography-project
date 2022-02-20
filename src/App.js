@@ -1,7 +1,8 @@
 import Home from './Home';
 import Navbar from './Navbar';
 import './styles/App.scss';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import SectionDetails1 from './sections/SectionDetails1';
 import SectionDetails2 from './sections/SectionDetails2';
 import SectionDetails3 from './sections/SectionDetails3';

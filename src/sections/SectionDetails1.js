@@ -1,4 +1,4 @@
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const SectionDetails1 = () => {
     const { id } = useParams();
