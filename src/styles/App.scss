@@ -224,6 +224,12 @@ nav {
     overflow: hidden;
     position: relative;
     text-align: center;
+
+    a {
+      @include maxMQ(768px) {
+        pointer-events: none;
+      }
+    }
     
     h1{
       z-index: 2;
@@ -253,11 +259,18 @@ nav {
 
   .image:hover img {
     filter: brightness(85%);
+    @include maxMQ(768px) {
+      filter: brightness(100%);
+    }
   }
 
   .image:hover {
     h1 {
       opacity: 1;
+      @include maxMQ(768px) {
+        opacity: 0;
+      }
+      
     }
   }
 }
