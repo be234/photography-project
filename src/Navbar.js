@@ -10,10 +10,10 @@ const Navbar = () => {
             </label>
             <Link to="/"><label className='logo'><img src={logo} /></label></Link>
             <ul>
-                <li><a className="a" href="/">Portfolio</a></li>
-                <li><a className='a' href="/">Home</a></li>
+                <li><Link className="a" to="/">Portfolio</Link></li>
+                <li><Link className='a' to="/">Home</Link></li>
                 {/* <li><Link className="a" to="/create">New Blog</Link></li> */}
-                <li><a className="a" href="/about">About</a></li>
+                <li><Link className="a" to="/about">About</Link></li>
             </ul>
         </nav>
      );
