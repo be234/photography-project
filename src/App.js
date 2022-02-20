@@ -20,28 +20,28 @@ function App() {
       <Navbar />
       <div className="content">
         <Switch>
-          <Route exact path="/photography-project">
+          <Route exact path="/">
              <Home /> 
           </Route>
-          <Route path="/photography-project/section1">
+          <Route path="/section1">
              <SectionDetails1 />
           </Route>
-         <Route path="/photography-project/section2">
+         <Route path="/section2">
              <SectionDetails2 />
           </Route>
-           <Route path="/photography-project/section3">
+           <Route path="/section3">
              <SectionDetails3 />
           </Route>
-          <Route path="/photography-project/section4">
+          <Route path="/section4">
              <SectionDetails4 />
           </Route>
-          <Route path="/photography-project/section5">
+          <Route path="/section5">
              <SectionDetails5 />
           </Route>
-          <Route path="/photography-project/section6">
+          <Route path="/section6">
              <SectionDetails6 />
           </Route> 
-          <Route path="/photography-project/about">
+          <Route path="/about">
             <About />
           </Route>
           <Route path="*">
